@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		mysqli_close($con);
 
 
-		$display_url_code = "http://go-ahead.in/?".$url_code;
+		$display_url_code = "http://vikk.in/?".$url_code;
 
 		$qr_code_url = "https://chart.googleapis.com/chart?cht=qr&chs=150x150&chld=H|0&chl=".$display_url_code ;
 
@@ -78,7 +78,7 @@ if(count($codes) > 0) {
 		$link = $row['LINK'];
 		$hit_count = $row['COUNT'];
 
-		$display_url_code = "http://go-ahead.in/?".$codes[$code_count];
+		$display_url_code = "http://vikk.in/?".$codes[$code_count];
 		echo($display_url_code . "&nbsp;&nbsp;<img src='./qrimg/$codes[$code_count].png'/>&nbsp;&nbsp;$link&nbsp;&nbsp;Count:&nbsp;$hit_count<br /><br />");
 		$code_count = $code_count + 1;
 	}
